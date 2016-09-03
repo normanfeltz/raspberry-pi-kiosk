@@ -28,10 +28,10 @@ After rebooting the GUI environment will automatically startup and you will see 
 sudo apt-get update
 sudo apt-get upgrade
 ```
-Now we install the tools we need to perfectly show the webpage. The next command will install x11 server utils, unclutter (to hide the cursor from the screen) and xscreensaver for disable screen saver
+Now we install the tools we need to perfectly show the webpage. The next command will install x11 server utils and unclutter (to hide the cursor from the screen)
 
 ```
-sudo apt-get install x11-xserver-utils unclutter xscreensaver
+sudo apt-get install x11-xserver-utils unclutter
 ```
 
 Add the Chromium repository and install the software
@@ -55,7 +55,6 @@ The autostart files needs to look like this
 @xset s off
 @xset -dpms
 @xset s noblank
-@xscreensaver -no-splash
 @chromium-browser --incognito --kiosk --disable-infobars [URL]
 ```
 
