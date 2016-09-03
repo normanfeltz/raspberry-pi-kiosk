@@ -34,6 +34,14 @@ Now we install the tools we need to perfectly show the webpage. The next command
 sudo apt-get install x11-xserver-utils unclutter xscreensaver
 ```
 
+Add the Chromium repository and install the software
+```
+wget -qO - http://bintray.com/user/downloadSubjectPublicKey?username=bintray | sudo apt-key add -
+echo "deb http://dl.bintray.com/kusti8/chromium-rpi jessie main" | sudo tee -a /etc/apt/sources.list
+sudo apt-get update
+sudo apt-get install chromium-browser rpi-youtube -y
+```
+
 The tools are installed. When the GUI starts up chromium needs to boot in kiosk-mode and open the webpage we filled in. In the next file we can add lines what needs to be executed at startup.
 
 ```
@@ -66,3 +74,4 @@ Now Chromium will start after the raspberry pi is booted up and will show the we
 
 - http://www.raspberrypi-spy.co.uk/2014/05/how-to-autostart-apps-in-rasbian-lxde-desktop/
 - http://www.danpurdy.co.uk/web-development/raspberry-pi-kiosk-screen-tutorial/
+- https://www.raspberrypi.org/forums/viewtopic.php?t=121195
