@@ -56,7 +56,7 @@ The autostart files needs to look like this
 @xset -dpms
 @xset s noblank
 @xscreensaver -no-splash
-@chromium-browser --incognito --kiosk http://dev.normanfeltz.fr/monitoring/
+@chromium-browser --incognito --kiosk [URL]
 ```
 
 The @xset options will disable the energy-options from the X-server so the screen won't be shut down after a x amount of time.
