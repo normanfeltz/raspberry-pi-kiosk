@@ -28,18 +28,14 @@ After rebooting the GUI environment will automatically startup and you will see 
 sudo apt-get update
 sudo apt-get upgrade
 ```
-Now we install the tools we need to perfectly show the webpage. The next command will install x11 server utils and unclutter (to hide the cursor from the screen)
+Now we install the tools we need to perfectly show the webpage. Add the Chromium repository and install the software. 
+The next command will install x11 server utils and unclutter (to hide the cursor from the screen)
 
-```
-sudo apt-get install x11-xserver-utils unclutter
-```
-
-Add the Chromium repository and install the software
 ```
 wget -qO - http://bintray.com/user/downloadSubjectPublicKey?username=bintray | sudo apt-key add -
 echo "deb http://dl.bintray.com/kusti8/chromium-rpi jessie main" | sudo tee -a /etc/apt/sources.list
 sudo apt-get update
-sudo apt-get install chromium-browser
+sudo apt-get install chromium-browser x11-xserver-utils unclutter
 ```
 
 The tools are installed. When the GUI starts up chromium needs to boot in kiosk-mode and open the webpage we filled in. In the next file we can add lines what needs to be executed at startup.
